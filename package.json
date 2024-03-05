@@ -1,0 +1,20 @@
+{
+  "name": "ftp-simple-manager",
+  "version": "1.0.0",
+  "description": "A simple FTP client library for Node.js",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Yuri Ouverney",
+  "license": "MIT",
+  "dependencies": {
+    "tls": "^0.0.1",
+    "tsc": "^2.0.4",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  }
+}

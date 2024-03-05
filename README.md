@@ -17,36 +17,41 @@
 ## Installation
 
 You can install `ftp-simple-manager` via npm:
+
+```
 npm install ftp-simple-manager
+```
 
 ## API Documentation
 
-Creates a new instance of FTPClient.
+### Constructor
+
+```javascript
 const ftp = new FTPSimpleManager(host, port, username, password, secure);
+```
 
-host (string): The hostname or IP address of the FTP server.
-port (number, optional): The port number of the FTP server (default is 21).
-username (string): The username for authentication.
-password (string): The password for authentication.
-secure (boolean, optional): Whether to use a secure TLS/SSL connection (default is false).
+- **host** (string): The hostname or IP address of the FTP server.
+- **port** (number, optional): The port number of the FTP server (default is 21).
+- **username** (string): The username for authentication.
+- **password** (string): The password for authentication.
+- **secure** (boolean, optional): Whether to use a secure TLS/SSL connection (default is false).
 
-## Methods
-connect(): Promise<void>: Establishes a connection to the FTP server.
-connectAndLogin(): Promise<void>: Establishes a connection and logs in to the FTP server.
-login(): Promise<void>: Logs in to the FTP server with the provided credentials.
-list(path: string): Promise<{ name: string; size: number; date: Date }[]>: Retrieves a list of files and directories in the specified path.
-upload(localPath: string, remotePath: string): Promise<void>: Uploads a file from the local filesystem to the FTP server.
-download(remotePath: string, localPath: string): Promise<void>: Downloads a file from the FTP server to the local filesystem.
-remove(path: string): Promise<void>: Deletes a file or directory from the FTP server.
-disconnect(): Promise<void>: Closes the connection to the FTP server.
+### Methods
+
+- **connect(): Promise<void>**: Establishes a connection to the FTP server.
+- **connectAndLogin(): Promise<void>**: Establishes a connection and logs in to the FTP server.
+- **login(): Promise<void>**: Logs in to the FTP server with the provided credentials.
+- **list(path: string): Promise<{ name: string; size: number; date: Date }[]>**: Retrieves a list of files and directories in the specified path.
+- **upload(localPath: string, remotePath: string): Promise<void>**: Uploads a file from the local filesystem to the FTP server.
+- **download(remotePath: string, localPath: string): Promise<void>**: Downloads a file from the FTP server to the local filesystem.
+- **remove(path: string): Promise<void>**: Deletes a file or directory from the FTP server.
+- **disconnect(): Promise<void>**: Closes the connection to the FTP server.
 
 ## Usage
+
 Here's a basic example of how to use ftp-simple-manager:
 
-const FTPSimpleManager = require('ftp-simple-manager');
-
-const ftp = new FTPSimpleManager('host', 21, 'username', 'password');
-
+```javascript
 const FTPSimpleManager = require('ftp-simple-manager');
 
 const main = async () => {
@@ -64,6 +69,8 @@ const main = async () => {
 };
 
 main();
+```
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
